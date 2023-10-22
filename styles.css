@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+  /* Primary */
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: #aa5cdb;
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+  /* Typography */
+  --font-primary: 'Inter', sans-serif;
+  --font-secundary: 'Lexend Deca', sans-serif;
+  --font-weigth-regular: 400;
+  --font-weigth-bold: 700;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: var(--font-weigth-regular);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--very-dark-blue);
+}
+
+main {
+  padding: 2rem 1rem;
+}
+
+.card-stats {
+  font-size: 0.9375rem;
+  color: var(--slightly-transparent-white);
+  background-color: var(--dark-desaturated-blue);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 500px;
+}
+
+.card-stats__header {
+  background-color: var(--soft-violet);
+}
+
+.card-stats__img {
+  max-width: 100%;
+  display: block;
+  mix-blend-mode: multiply;
+}
+
+.card-stats__body {
+  padding: 2rem 1.5rem;
+}
+
+.card-stats__title {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: var(--font-weigth-bold);
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.card-stats__title strong {
+  color: var(--soft-violet);
+}
+
+.card-stats__text {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card-stats__stats {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.card-stats__stats-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-stats__quantity {
+  font-size: 1.5rem;
+  font-weight: var(--font-weigth-bold);
+  color: var(--white);
+}
+
+.card-stats__name {
+  font-family: var(--font-secundary);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+@media screen and (min-width: 1024px) {
+  .card-stats {
+    display: flex;
+    max-width: 1140px;
+  }
+
+  .card-stats__header {
+    order: 1;
+    width: 50%;
+  }
+
+  .card-stats__body {
+    width: 50%;
+    padding: 4rem;
+  }
+
+  .card-stats__title {
+    font-size: 2.25rem;
+    text-align: left;
+  }
+
+  .card-stats__text {
+    text-align: left;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+  }
+
+  .card-stats__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-stats__stats {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .card-stats__body {
+    padding: 4.5rem;
+  }
+
+  .card-stats__title {
+    font-size: 2.3rem;
+  }
+
+  .card-stats__text {
+    font-size: 1.25rem;
+  }
+}
